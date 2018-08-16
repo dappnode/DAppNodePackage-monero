@@ -1,0 +1,34 @@
+{
+  "name": "monero.dnp.dappnode.eth",
+  "version": "0.0.1",
+  "description": "monerod is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
+  "avatar": "monero.jpg",
+  "type": "service",
+  "image": {
+    "path": "",
+    "hash": "",
+    "size": "",
+    "ports": [
+      "18080:18080"
+    ],
+    "volumes": [
+      "data:/root/.bitmonero"
+    ]
+  },
+  "author": "Eduardo Antuña Díez (eduadiez)",
+  "keywords": [
+    "monero"
+  ],
+  "homepage": {
+    "homepage": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "license": "GPL-3.0",
+  "dependencies": {}
+}

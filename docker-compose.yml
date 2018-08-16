@@ -1,0 +1,5 @@
+version: '3.4'
+services:
+    monero.dnp.dappnode.eth:
+        build: .
+        image: monero.dnp.dappnode.eth:0.0.1

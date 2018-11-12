@@ -35,7 +35,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 
 EXPOSE 18081
 
-RUN  apk add --no-cache pcsc-lite-libs && \
+RUN  apk add --no-cache pcsc-lite-libs eudev && \
     wget -qO- https://downloads.getmonero.org/cli/linux64 | tar --strip-components=2 -C /usr/bin -jxvf -
 
 COPY start_monerod .

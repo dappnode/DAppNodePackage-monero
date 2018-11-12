@@ -2,12 +2,12 @@
   "name": "monero.dnp.dappnode.eth",
   "version": "0.0.2",
   "description": "monerod is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
-  "avatar": "monero.jpg",
+  "avatar": "/ipfs/Qmb3L7wgoJ8UvduwcwjqUudcEnZgXKVAZvQ8rNE5L6vR34",
   "type": "service",
   "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
+    "path": "monero.dnp.dappnode.eth_0.0.2.tar.xz",
+    "hash": "/ipfs/QmSKd8nMg4bSySBP8XB3iraBXRbkAruf42tn3o7AXoW6bc",
+    "size": "19415740",
     "ports": [
       "18080:18080"
     ],

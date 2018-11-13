@@ -6,16 +6,13 @@
   "type": "service",
   "image": {
     "path": "monero.dnp.dappnode.eth_0.0.2.tar.xz",
-    "hash": "/ipfs/QmSKd8nMg4bSySBP8XB3iraBXRbkAruf42tn3o7AXoW6bc",
+    "hash": "/ipfs/QmSZ1FiwNdZk1sW2RFcTEcXoDc7JNaKT2tF9BFUwAoxVNV",
     "size": "19415740",
     "ports": [
       "18080:18080"
     ],
     "volumes": [
       "data:/root/.bitmonero"
-    ],
-    "environment": [
-      "MINING_ADDRESS"
     ]
   },
   "author": "Eduardo Antuña Díez (eduadiez)",

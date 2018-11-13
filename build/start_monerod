@@ -1,6 +1,0 @@
-#!/bin/sh
-if [ -z $MINING_ADDRESS ]; then
-    monerod --rpc-bind-ip=0.0.0.0 --confirm-external-bind --non-interactive
-else
-    monerod --rpc-bind-ip=0.0.0.0 --confirm-external-bind --non-interactive --start-mining $MINING_ADDRESS
-fi

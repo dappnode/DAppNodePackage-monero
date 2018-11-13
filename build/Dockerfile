@@ -34,10 +34,10 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
         "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME"
 
 EXPOSE 18081
+EXPOSE 18080
 
 RUN  apk add --no-cache pcsc-lite-libs eudev && \
     wget -qO- https://downloads.getmonero.org/cli/linux64 | tar --strip-components=2 -C /usr/bin -jxvf -
 
-COPY start_monerod .
+ENTRYPOINT ["monerod", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=18080", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=18081", "--non-interactive", "--confirm-external-bind"]
 
-ENTRYPOINT ["./start_monerod"]

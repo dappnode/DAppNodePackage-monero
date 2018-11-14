@@ -1,13 +1,13 @@
 {
   "name": "monero.dnp.dappnode.eth",
-  "version": "0.0.2",
-  "description": "monerod is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
+  "version": "0.1.0",
+  "description": "monerod (v0.13.0.4)is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
   "avatar": "/ipfs/Qmb3L7wgoJ8UvduwcwjqUudcEnZgXKVAZvQ8rNE5L6vR34",
   "type": "service",
   "image": {
-    "path": "monero.dnp.dappnode.eth_0.0.2.tar.xz",
-    "hash": "/ipfs/QmSZ1FiwNdZk1sW2RFcTEcXoDc7JNaKT2tF9BFUwAoxVNV",
-    "size": "19415740",
+    "path": "",
+    "hash": "",
+    "size": "",
     "ports": [
       "18080:18080"
     ],
@@ -15,20 +15,23 @@
       "data:/root/.bitmonero"
     ]
   },
-  "author": "Eduardo Antuña Díez (eduadiez)",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
+    "Abel Boldú (@vdo)"
+  ],
   "keywords": [
     "monero"
   ],
   "homepage": {
-    "homepage": "https://getmonero.org"
+    "homepage": "https://github.com/dappnode/DAppNodePackage-monero#readme"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/dappnode/DAppNodePackage-monero.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/dappnode/DAppNodePackage-monero/issues"
   },
-  "license": "GPL-3.0",
-  "dependencies": {}
+  "license": "GPL-3.0"
 }

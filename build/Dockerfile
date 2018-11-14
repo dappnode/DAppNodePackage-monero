@@ -2,8 +2,9 @@ FROM alpine
 
 WORKDIR /usr/src/app
 
+ARG ALPINE_GLIBC_PACKAGE_VERSION="2.28-r0"
+
 RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
-    ALPINE_GLIBC_PACKAGE_VERSION="2.28-r0" && \
     ALPINE_GLIBC_BASE_PACKAGE_FILENAME="glibc-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
     ALPINE_GLIBC_BIN_PACKAGE_FILENAME="glibc-bin-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
     ALPINE_GLIBC_I18N_PACKAGE_FILENAME="glibc-i18n-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
@@ -36,8 +37,10 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 EXPOSE 18081
 EXPOSE 18080
 
+ARG MONERO_VERSION=v0.13.0.4
+
 RUN  apk add --no-cache pcsc-lite-libs eudev && \
-    wget -qO- https://downloads.getmonero.org/cli/linux64 | tar --strip-components=2 -C /usr/bin -jxvf -
+    wget -qO- https://downloads.getmonero.org/gui/monero-gui-linux-x64-${MONERO_VERSION}.tar.bz2 | tar --strip-components=2 -C /usr/bin -jxvf -
 
 ENTRYPOINT ["monerod", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=18080", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=18081", "--non-interactive", "--confirm-external-bind"]
 

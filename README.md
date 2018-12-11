@@ -55,3 +55,7 @@ ou can use this package without installing it in your DAppNode following these i
 
 address: my.monero.dnp.dappnode.eth 
 port:    18081
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details

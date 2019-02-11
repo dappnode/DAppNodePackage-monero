@@ -4,6 +4,7 @@
   "description": "monerod (v0.13.0.4)is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
   "avatar": "/ipfs/Qmb3L7wgoJ8UvduwcwjqUudcEnZgXKVAZvQ8rNE5L6vR34",
   "type": "service",
+  "chain": "monero",
   "image": {
     "path": "",
     "hash": "",

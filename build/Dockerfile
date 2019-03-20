@@ -1,7 +1,7 @@
 FROM alpine as build
 
-ARG MONERO_VERSION=v0.13.0.4
-RUN wget -qO- https://downloads.getmonero.org/gui/monero-gui-linux-x64-${MONERO_VERSION}.tar.bz2 | tar --strip-components=2 -C /usr/bin -jxvf -
+ARG MONERO_VERSION=v0.14.0.2
+RUN wget -qO- https://downloads.getmonero.org/cli/monero-linux-x64-${MONERO_VERSION}.tar.bz2 | tar --strip-components=2 -C /usr/bin -jxvf -
 
 FROM alpine 
 RUN  apk add --no-cache eudev

@@ -1,10 +1,11 @@
 {
   "name": "monero.dnp.dappnode.eth",
   "version": "0.1.2",
-  "description": "monerod (v0.14.0.2) is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
+  "upstreamVersion": "0.14.0-2",
+  "shortDescription": "Your own node for the private digital currency",
+  "description": "The Monero daemon monerod keeps your computer synced up with the Monero network. It downloads and validates the blockchain from the p2p network. `monerod` is entirely decoupled from your wallet. `monerod` does not access your private keys - it is not aware of your transactions and balance. Read the [monerod reference](https://monerodocs.org/interacting/monerod-reference/) to know all you can do with this DAppNode Package.",
   "avatar": "/ipfs/QmV93G3PgNEsCTbdnaZcYFjsrTSMeKnQriPoEYeHo9kiA9",
   "type": "service",
-  "chain": "monero",
   "image": {
     "path": "",
     "hash": "",
@@ -16,20 +17,24 @@
       "data:/root/.bitmonero"
     ]
   },
+  "chain": "monero",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
     "Abel Boldú (@vdo)"
   ],
+  "categories": [
+    "Blockchain"
+  ],
   "keywords": [
     "monero"
   ],
-  "homepage": {
+  "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-monero#readme"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dappnode/DAppNodePackage-monero.git"
+    "url": "https://github.com/dappnode/DAppNodePackage-monero.git"
   },
   "bugs": {
     "url": "https://github.com/dappnode/DAppNodePackage-monero/issues"

@@ -1,11 +1,11 @@
 FROM alpine as build
 
-ARG MONERO_VERSION=v0.14.0.2
-RUN wget -qO- https://downloads.getmonero.org/cli/monero-linux-x64-${MONERO_VERSION}.tar.bz2 | tar --strip-components=2 -C /usr/bin -jxvf -
+ARG MONERO_VERSION=v0.15.0.0
+RUN wget -qO- https://downloads.getmonero.org/cli/monero-linux-x64-${MONERO_VERSION}.tar.bz2 | tar --strip-components=1 -C /usr/bin -jxvf -
 
-FROM alpine 
+FROM alpine
 RUN  apk add --no-cache eudev
-ARG ALPINE_GLIBC_PACKAGE_VERSION="2.28-r0"
+ARG ALPINE_GLIBC_PACKAGE_VERSION="2.30-r0"
 RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
     ALPINE_GLIBC_BASE_PACKAGE_FILENAME="glibc-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
     ALPINE_GLIBC_BIN_PACKAGE_FILENAME="glibc-bin-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \

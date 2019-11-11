@@ -1,7 +1,7 @@
 {
   "name": "monero.dnp.dappnode.eth",
-  "version": "0.1.1",
-  "description": "monerod (v0.14.0.2) is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
+  "version": "0.1.2",
+  "description": "monerod (v0.15.0.0) is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain",
   "avatar": "/ipfs/QmV93G3PgNEsCTbdnaZcYFjsrTSMeKnQriPoEYeHo9kiA9",
   "type": "service",
   "chain": "monero",
@@ -9,21 +9,15 @@
     "path": "",
     "hash": "",
     "size": "",
-    "ports": [
-      "18080:18080"
-    ],
-    "volumes": [
-      "data:/root/.bitmonero"
-    ]
+    "ports": ["18080:18080"],
+    "volumes": ["data:/root/.bitmonero"]
   },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
     "Abel Boldú (@vdo)"
   ],
-  "keywords": [
-    "monero"
-  ],
+  "keywords": ["monero"],
   "homepage": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-monero#readme"
   },

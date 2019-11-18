@@ -2,4 +2,5 @@ version: "3.4"
 services:
     monero.dnp.dappnode.eth:
         build: ./build
-        image: "monero.dnp.dappnode.eth:0.1.2"
+        image: 'monero.dnp.dappnode.eth:0.1.2'
+

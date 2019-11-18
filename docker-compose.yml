@@ -1,11 +1,11 @@
-version: "3.4"
+version: '3.4'
 services:
-    monero.dnp.dappnode.eth:
-        build: ./build
-        image: 'monero.dnp.dappnode.eth:0.1.2'
-        ports: 
-            - 18080:18080
-        volumes:
-            - data:/root/.bitmonero
+  monero.dnp.dappnode.eth:
+    build: ./build
+    image: 'monero.dnp.dappnode.eth:0.2.0'
+    ports:
+      - '18080:18080'
+    volumes:
+      - 'data:/root/.bitmonero'
 volumes:
   data: {}

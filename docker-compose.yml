@@ -3,4 +3,9 @@ services:
     monero.dnp.dappnode.eth:
         build: ./build
         image: 'monero.dnp.dappnode.eth:0.1.2'
-
+        ports: 
+            - 18080:18080
+        volumes:
+            - data:/root/.bitmonero
+volumes:
+  data: {}

@@ -1,0 +1,14 @@
+{
+  "rpcPaymentAddress": {
+    "type": "environment",
+    "name": "RPC_PAYMENT_ADDRESS"
+  },
+  "rpcPaymentCredits": {
+    "type": "environment",
+    "name": "RPC_PAYMENT_CREDITS"
+  },
+  "rpcPaymentDifficulty": {
+    "type": "environment",
+    "name": "RPC_PAYMENT_DIFFICULTY"
+  }
+}

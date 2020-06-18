@@ -11,12 +11,8 @@
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
     "Abel Boldú (@vdo)"
   ],
-  "categories": [
-    "Blockchain"
-  ],
-  "keywords": [
-    "monero"
-  ],
+  "categories": ["Blockchain"],
+  "keywords": ["monero"],
   "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-monero#readme"
   },

@@ -7,5 +7,7 @@ services:
       - '18080:18080'
     volumes:
       - 'data:/root/.bitmonero'
+    environment:
+      - EXTRA_FLAGS=
 volumes:
   data: {}

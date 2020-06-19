@@ -1,7 +1,7 @@
 {
   "name": "monero.dnp.dappnode.eth",
-  "version": "0.2.0",
-  "upstreamVersion": "v0.15.0.0",
+  "version": "0.2.2",
+  "upstreamVersion": "v0.16.0.0",
   "shortDescription": "Your own node for the private digital currency",
   "description": "The Monero daemon monerod keeps your computer synced up with the Monero network. It downloads and validates the blockchain from the p2p network. `monerod` is entirely decoupled from your wallet. `monerod` does not access your private keys - it is not aware of your transactions and balance. Read the [monerod reference](https://monerodocs.org/interacting/monerod-reference/) to know all you can do with this DAppNode Package.",
   "type": "service",
@@ -11,12 +11,8 @@
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
     "Abel Boldú (@vdo)"
   ],
-  "categories": [
-    "Blockchain"
-  ],
-  "keywords": [
-    "monero"
-  ],
+  "categories": ["Blockchain"],
+  "keywords": ["monero"],
   "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-monero#readme"
   },

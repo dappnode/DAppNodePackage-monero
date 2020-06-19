@@ -1,9 +1,9 @@
-FROM alpine as build
+FROM debian:bullseye-slim as build
 
-ARG MONERO_VERSION=v0.15.0.1
+ARG MONERO_VERSION=v0.16.0.0
 ENV FILENAME monero-linux-x64-${MONERO_VERSION}.tar.bz2
 ENV DOWNLOAD_URL https://downloads.getmonero.org/cli/${FILENAME}
-ENV SHA256SUM 8d61f992a7e2dbc3d753470b4928b5bb9134ea14cf6f2973ba11d1600c0ce9ad
+ENV SHA256SUM e507943b46e9d7c9ccdb641dcccb9d8205dd9de660a0ab5566dac5423f8b95e2
 
 ADD $DOWNLOAD_URL /$FILENAME
 RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
@@ -11,45 +11,16 @@ RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ];
     echo "Checksum verification failed."; \
     exit 1; \
     else \
+    apt-get update -y;\
+    apt-get install bzip2 -y;\
     tar --strip-components=1 -C /usr/bin -jxvf  /$FILENAME; \
     fi
 
-FROM alpine
-RUN  apk add --no-cache eudev
-ARG ALPINE_GLIBC_PACKAGE_VERSION="2.30-r0"
-RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
-    ALPINE_GLIBC_BASE_PACKAGE_FILENAME="glibc-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
-    ALPINE_GLIBC_BIN_PACKAGE_FILENAME="glibc-bin-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
-    ALPINE_GLIBC_I18N_PACKAGE_FILENAME="glibc-i18n-$ALPINE_GLIBC_PACKAGE_VERSION.apk" && \
-    apk add --no-cache --virtual=.build-dependencies wget ca-certificates && \
-    wget \
-    "https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub" \
-    -O "/etc/apk/keys/sgerrand.rsa.pub" && \
-    wget \
-    "$ALPINE_GLIBC_BASE_URL/$ALPINE_GLIBC_PACKAGE_VERSION/$ALPINE_GLIBC_BASE_PACKAGE_FILENAME" \
-    "$ALPINE_GLIBC_BASE_URL/$ALPINE_GLIBC_PACKAGE_VERSION/$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
-    "$ALPINE_GLIBC_BASE_URL/$ALPINE_GLIBC_PACKAGE_VERSION/$ALPINE_GLIBC_I18N_PACKAGE_FILENAME" && \
-    apk add --no-cache \
-    "$ALPINE_GLIBC_BASE_PACKAGE_FILENAME" \
-    "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
-    "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME" && \
-    \
-    rm "/etc/apk/keys/sgerrand.rsa.pub" && \
-    /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 "$LANG" || true && \
-    echo "export LANG=$LANG" > /etc/profile.d/locale.sh && \
-    \
-    apk del glibc-i18n && \
-    \
-    rm "/root/.wget-hsts" && \
-    apk del .build-dependencies && \
-    rm \
-    "$ALPINE_GLIBC_BASE_PACKAGE_FILENAME" \
-    "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
-    "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME"
+FROM debian:bullseye-slim
 
 EXPOSE 18081
 EXPOSE 18080
 
 COPY --from=build /usr/bin/monerod /usr/bin/monerod
 
-ENTRYPOINT ["monerod", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=18080", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=18081", "--non-interactive", "--confirm-external-bind"]
+ENTRYPOINT monerod --p2p-bind-ip=0.0.0.0 --p2p-bind-port=18080 --rpc-bind-ip=0.0.0.0 --rpc-bind-port=18081 --non-interactive --confirm-external-bind $EXTRA_FLAGS

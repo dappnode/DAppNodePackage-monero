@@ -5,5 +5,12 @@
     "uploadedTo": {
       "dappnode": "Mon, 18 Nov 2019 13:54:21 GMT"
     }
+  },
+  "0.2.2": {
+    "hash": "/ipfs/QmTLknQ6iXR6yEJy9j2xosiK6FhAaHGSbJYyeKzqj4hctE",
+    "type": "directory",
+    "uploadedTo": {
+      "dappnode": "Thu, 18 Jun 2020 17:24:27 GMT"
+    }
   }
 }

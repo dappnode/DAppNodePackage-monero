@@ -10,7 +10,7 @@
 
 monerod is the daemon software that ships with the Monero tree. It is a console program, and manages the blockchain.
 
-Dappnode package responsible for providing the monero chain ( based on monero v0.15.0.0)
+Dappnode package responsible for providing the monero chain ( based on monero v0.17.1.1)
 
 Aragon Package Manager Repo at [0xe8332e80951c3020a5a8e529df01c12aa87f482f ](https://etherscan.io/address/0xe8332e80951c3020a5a8e529df01c12aa87f482f )
 

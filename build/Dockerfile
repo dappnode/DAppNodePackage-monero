@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim as build
 
-ARG MONERO_VERSION=v0.17.0.0
+ARG MONERO_VERSION=v0.17.1.1
 ENV FILENAME monero-linux-x64-${MONERO_VERSION}.tar.bz2
 ENV DOWNLOAD_URL https://downloads.getmonero.org/cli/${FILENAME}
 ENV SHA256SUM 4113cc92314fefebe52024d67a8b5d6d499adb4c3988f5d2b838ed3f80893874

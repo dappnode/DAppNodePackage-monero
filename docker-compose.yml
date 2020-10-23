@@ -1,8 +1,8 @@
-version: '3.4'
+version: '3.5'
 services:
   monero.dnp.dappnode.eth:
     build: ./build
-    image: 'monero.dnp.dappnode.eth:0.2.2'
+    image: 'monero.dnp.dappnode.eth:0.2.3'
     ports:
       - '18080:18080'
     volumes:

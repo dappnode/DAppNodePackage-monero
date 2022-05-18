@@ -2,7 +2,7 @@ version: "3.4"
 services:
   monero.dnp.dappnode.eth:
     build:
-      context: ./build
+      context: .
       args:
         UPSTREAM_VERSION: v0.17.3.0
     image: "monero.dnp.dappnode.eth:0.2.3"

@@ -36,7 +36,7 @@ You can use this package without installing it in your DAppNode following these 
 
 **Note**: Make sure you can run `git`, `docker ps`, `docker-compose` without any issue and without sudo command.
 
-## Buidling
+## Building
 
 `docker-compose build`
 

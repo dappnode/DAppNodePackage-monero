@@ -4,7 +4,7 @@ services:
     build:
       context: .
       args:
-        UPSTREAM_VERSION: v0.18.1.2
+        UPSTREAM_VERSION: v0.18.2.2
     image: "monero.dnp.dappnode.eth:0.2.3"
     ports:
       - "18089:18089"

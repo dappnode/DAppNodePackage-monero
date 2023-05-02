@@ -56,7 +56,7 @@ You can use this package without installing it in your DAppNode following these 
 
 ## Connect using monero gui
 
-address: my.monero.dnp.dappnode.eth
+address: http://monero.dappnode
 port: 18081
 
 ## License

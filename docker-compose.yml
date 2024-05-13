@@ -4,13 +4,13 @@ services:
     build:
       context: .
       args:
-        UPSTREAM_VERSION: v0.18.2.2
-    image: "monero.dnp.dappnode.eth:0.2.3"
+        UPSTREAM_VERSION: v0.18.3.3
+    image: monero.dnp.dappnode.eth:0.2.3
     ports:
       - "18089:18089"
       - "18081"
     volumes:
-      - "data:/root/.bitmonero"
+      - data:/root/.bitmonero
     environment:
       - P2P_PORT=18089
       - EXTRA_FLAGS=

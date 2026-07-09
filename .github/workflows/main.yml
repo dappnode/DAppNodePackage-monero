@@ -1,6 +1,5 @@
 name: "Main"
 on:
-  pull_request:
   push:
     branches:
       - "master"
@@ -8,22 +7,18 @@ on:
       - "v[0-9]+.[0-9]+.[0-9]+.[0-9]+"
     paths-ignore:
       - "README.md"
+  workflow_dispatch:
+  repository_dispatch:
 
 jobs:
-  build-test:
-    runs-on: ubuntu-latest
-    name: Build test
-    if: github.event_name != 'push'
-    steps:
-      - uses: actions/checkout@v4
-      - run: npx @dappnode/dappnodesdk build --skip_save
-
   release:
     name: Release
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
       - name: Publish
         run: npx @dappnode/dappnodesdk publish patch --dappnode_team_preset
         env:

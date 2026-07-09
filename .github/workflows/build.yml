@@ -1,0 +1,13 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - "master"
+    paths-ignore: ["README.md"]
+
+jobs:
+  build:
+    uses: dappnode/workflows/.github/workflows/dappnode-build-hash.yml@master
+    secrets: inherit

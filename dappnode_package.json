@@ -1,29 +1,33 @@
 {
-  "name": "monero.dnp.dappnode.eth",
-  "version": "0.2.11",
-  "upstreamVersion": "v0.18.5.0",
-  "upstreamRepo": "monero-project/monero",
-  "shortDescription": "Your own node for the private digital currency",
-  "description": "The Monero daemon monerod keeps your computer synced up with the Monero network. It downloads and validates the blockchain from the p2p network. `monerod` is entirely decoupled from your wallet. `monerod` does not access your private keys - it is not aware of your transactions and balance. Read the [monerod reference](https://monerodocs.org/interacting/monerod-reference/) to know all you can do with this DAppNode Package.",
-  "type": "service",
-  "chain": "monero",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-monero/issues"
+  },
+  "categories": [
+    "Blockchain"
+  ],
+  "chain": "monero",
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
     "Abel Boldú (@vdo)"
   ],
-  "categories": ["Blockchain"],
-  "keywords": ["monero"],
+  "description": "The Monero daemon monerod keeps your computer synced up with the Monero network. It downloads and validates the blockchain from the p2p network. `monerod` is entirely decoupled from your wallet. `monerod` does not access your private keys - it is not aware of your transactions and balance. Read the [monerod reference](https://monerodocs.org/interacting/monerod-reference/) to know all you can do with this DAppNode Package.",
+  "keywords": [
+    "monero"
+  ],
+  "license": "GPL-3.0",
   "links": {
     "api": "http://monero.dappnode:18081",
     "homepage": "https://github.com/dappnode/DAppNodePackage-monero#readme"
   },
+  "name": "monero.dnp.dappnode.eth",
   "repository": {
     "type": "git",
     "url": "https://github.com/dappnode/DAppNodePackage-monero.git"
   },
-  "bugs": {
-    "url": "https://github.com/dappnode/DAppNodePackage-monero/issues"
-  },
-  "license": "GPL-3.0"
+  "shortDescription": "Your own node for the private digital currency",
+  "type": "service",
+  "upstreamRepo": "monero-project/monero",
+  "upstreamVersion": "v0.18.5.1",
+  "version": "0.2.12"
 }

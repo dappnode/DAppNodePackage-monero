@@ -28,6 +28,6 @@
   "shortDescription": "Your own node for the private digital currency",
   "type": "service",
   "upstreamRepo": "monero-project/monero",
-  "upstreamVersion": "v0.18.5.1",
+  "upstreamVersion": "v0.18.5.3",
   "version": "0.2.12"
 }

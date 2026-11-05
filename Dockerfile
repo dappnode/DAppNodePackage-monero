@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim as build
+FROM debian:trixie-slim as build
 
 ARG UPSTREAM_VERSION
 ENV FILENAME monero-linux-x64-${UPSTREAM_VERSION}.tar.bz2
@@ -10,7 +10,7 @@ RUN apt update && \
     curl https://downloads.getmonero.org/cli/monero-linux-x64-${UPSTREAM_VERSION}.tar.bz2 -o monero-linux-x64-${UPSTREAM_VERSION}.tar.bz2 && \
     tar --strip-components=1 -C /usr/bin -jxvf monero-linux-x64-${UPSTREAM_VERSION}.tar.bz2
 
-FROM debian:bullseye-slim
+FROM debian:trixie-slim
 
 COPY --from=build /usr/bin/monerod /usr/bin/monerod
 
